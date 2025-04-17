@@ -2635,7 +2635,7 @@ extern "C" JNIEXPORT jboolean JNICALL Java_net_rpcsx_RPCSX_settingsSet(
 extern "C" JNIEXPORT jboolean JNICALL
 Java_net_rpcsx_RPCSX_supportsCustomDriverLoading(JNIEnv *env,
                                                  jobject instance) {
-  return access("/dev/kgsl-3d0", F_OK) == 0;
+  return true; // access("/dev/kgsl-3d0", F_OK) == 0;
 }
 
 extern "C" JNIEXPORT jstring JNICALL
